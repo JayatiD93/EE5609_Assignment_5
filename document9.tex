@@ -216,119 +216,99 @@ d) $AP$ is the parpendicular bisector of $BC$
 \label{fig:iso_scelen}	
 \end{figure}
 
-The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: $\vec{A} = \myvec{a_1\\a_2}$ , $\vec{B} = \myvec{0\\0}$, $\vec{C} = \myvec{c_1\\0}$ and $\vec{D} = \myvec{d_1\\d_2}$
+The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: $\vec{A} = \myvec{a_1\\a_2}$ , $\vec{B} = \myvec{0\\0}$, $\vec{C} = \myvec{c_1\\0}$, $\vec{D} = \myvec{d_1\\d_2}$ and $\vec{P} = \myvec{p_1\\0}$
 
 From the problem statement we get that:
 \begin{align}
 \norm{\vec{A}-\vec{B}} = \norm{\vec{A}-\vec{C}}
+\implies \norm{\vec{AB}} = \norm{\vec{AC}}
 \end{align}
+\label{cond1}
 
 \begin{align}
 \norm{\vec{D}-\vec{B}} = \norm{\vec{D}-\vec{C}}
+\implies \norm{\vec{DB}} = \norm{\vec{DC}}
 \end{align}
+\label{cond2}
 
-$\angle ABC$ = $\angle ACB$ and $\angle DBC$ = $\angle DCB$
-
-Now, for $\triangle ABD$ and $\triangle ACD$,
+Now, let $\vec{P}$ = k$\vec{C}$ as $\vec{P}$ is on $\vec{BC}$.
+So, 
 \begin{align}
-\norm{\vec{A}-\vec{B}} = \norm{\vec{A}-\vec{C}}
+\myvec{p_1\\0} = k\myvec{c_1\\0}
+\implies p_1 = kc_1
 \end{align}
 
+Now, squaring both side of the equation \ref{cond1},
 \begin{align}
-\norm{\vec{D}-\vec{B}} = \norm{\vec{D}-\vec{C}}
+\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{C}}^2\\
+\implies a_1^2 + a_2^2 = (a_1- c_1)^2 + a_2^2\\
+\implies c_1^2 = 2a_1 c_1\\
+\implies c_1(c_1 - 2a_1) = 0\label{cond3}
 \end{align}
- and 
+\label{cond3}
+So, either $c_1$ = 0 or $c_1$ = 2$a_1$. As $c_1$ = 0 is not possible, so $c_1$ = 2$a_1$.
+
+Similarly, squaring both side of the equation \ref{cond2},
 \begin{align}
-\norm{\vec{A}-\vec{D}} = \norm{\vec{A}-\vec{D}}
+\norm{\vec{D}-\vec{B}}^2 = \norm{\vec{D}-\vec{C}}^2\\
+\implies d_1^2 + d_2^2 = (d_1- c_1)^2 + d_2^2\\
+\implies c_1^2 = 2d_1 c_1\\
+\implies c_1(c_1 - 2d_1) = 0\label{cond4}
 \end{align}
-So, using SSS theorem it can be concluded that $\triangle ABD$ $\cong$ $\triangle ACD$.
+\label{cond4}
 
-As $\triangle ABD$ $\cong$ $\triangle ACD$ and 
+So, either $c_1$ = 0 or $c_1$ = 2$d_1$. As $c_1$ = 0 is not possible, so $c_1$ = 2$d_1$.
+
+So, it is observed that $d_1$ = $a_1$.
+So we can say that $\vec{A} = \myvec{a_1\\a_2}$ and $\vec{D} = \myvec{a_1\\d_2}$ and as $\vec{AD}$ is extended to intersect $\vec{BC}$ at $\vec{P}$, so $\vec{P} = \myvec{a_1\\0}$.
+
+Now, $\norm{\vec{BP}}$ = $p_1$ = $a_1$ and $\norm{\vec{CP}}$ = $\sqrt{(2a_1 - a_1)^2}$= $a_1$.
+
+For $\triangle DBC$ being iso-scelen, $\angle DBC$ = $\angle DCB$. 
 \begin{align}
-\norm{\vec{D}-\vec{B}} = \norm{\vec{D}-\vec{C}}
+\angle DBC = \angle DCB\\
+\implies \frac{\vec{CD}^T \vec{CP}}{\norm{\vec{CD}}\norm{\vec{CP}}}=\frac{\vec{BD}^T \vec{BP}}{\norm{\vec{BD}}\norm{\vec{BP}}}\\
+\implies k\norm{\vec{CP}} = (1-k)\norm{\vec{BP}}\\
+\implies k \times a_1 = (1-k) \times a-1 \\
+\implies k= \frac{1}{2}
 \end{align}
 
+Now, let the angle between $\vec{AB}$ and $\vec{AP}$ is $\theta_1$ and the angle between $\vec{AP}$ and $\vec{AC}$ is $\theta_2$.
 \begin{align}
-\angle BAD = \angle CAD
-\implies \angle BAP = \angle CAP
+\cos\theta_1 = \frac{\vec{AB}^T \vec{AP}}{\norm{\vec{AB}}\norm{\vec{AP}}}\\
+\implies \cos\theta_1 = \frac{a_1^2 - ka_1c_1 + a_2^2}{\norm{\vec{AB}}\norm{\vec{AP}}}\\
+\implies \cos\theta_1 = \frac{a_1^2 - 2ka_1^2 + a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
 \end{align}
 
-Now, for $\triangle ABP$ and $\triangle ACP$,
+Now, putting the value of k = $\frac{1}{2}$,
 \begin{align}
-\norm{\vec{A}-\vec{B}} = \norm{\vec{A}-\vec{C}}
+\cos\theta_1 = \frac{a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
 \end{align}
 
+Similarly,
 \begin{align}
-\norm{\vec{A}-\vec{P}} = \norm{\vec{A}-\vec{P}}
+\cos\theta_2 = \frac{\vec{AC}^T \vec{AP}}{\norm{\vec{AC}}\norm{\vec{AP}}}\\
+\implies \cos\theta_2 = \frac{-a_1^2 + 2ka_1^2 + a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
 \end{align}
 
+And now, putting the value of k = $\frac{1}{2}$,
 \begin{align}
-\angle BAP = \angle CAP
+ \cos\theta_2 = \frac{a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
 \end{align}
-\label{angle1}
 
-So, using SAS theorem it can be concluded that $\triangle ABP$ $\cong$ $\triangle ACP$.
+So, it can be easily observed that $\theta_1$ = $\theta_2$ (considering the principle value) and this proves that $\vec{AP}$ bisects $\angle A$.
 
-As $\angle BAP$ = $\angle PAC$ which implies that $\vec{AP}$ bisects $\angle A$.
-
-It is already proved that $\triangle ABP$ $\cong$ $\triangle ACP$ and $\angle BAP$ = $\angle PAC$, so 
+Now, let consider the angle between $\vec{DP}$ and $\vec{BP}$ is $\phi$.
 \begin{align}
-\norm{\vec{B}-\vec{P}} = \norm{\vec{P}-\vec{C}}
+\cos\phi = \frac{\vec{PD}^T \vec{PB}}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
+\implies \cos\phi = \frac{p_1(p_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
+\implies \cos\phi = \frac{p_1(2kd_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
+\implies \cos\phi = \frac{p_1(d_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
+\implies \cos\phi = 0\\
+\implies \phi = 90 \degree
 \end{align}
 
-Now for $\triangle DBP$ and $\triangle DCP$,
-\begin{align}
-\norm{\vec{D}-\vec{B}} = \norm{\vec{D}-\vec{C}}
-\end{align}
-
-\begin{align}
-\norm{\vec{D}-\vec{P}} = \norm{\vec{D}-\vec{P}}
-\end{align}
-
-\begin{align}
-\norm{\vec{B}-\vec{P}} = \norm{\vec{P}-\vec{C}}
-\end{align}
-
-So, according to SSS theorem $\triangle DBP$ $\cong$ $\triangle DCP$ and as 
-\begin{align}
-\norm{\vec{B}-\vec{P}} = \norm{\vec{P}-\vec{C}}
-\end{align}
-
-so, $\angle BDP$ = $\angle PDC$ which implies that $\vec{AP}$ bisects $\angle D$.
-
-From here we can say that $\vec{AP}$ bisects $\angle A$ as well as $\angle D$.
-
-Now, as $\norm{\vec{B}-\vec{P}}$ = $\norm{\vec{P}-\vec{C}}$, we can say that $\vec{AP}$ bisects $\vec{BC}$.
-
-It is already proved that $\triangle ABP$ $\cong$ $\triangle ACP$, so
-
-\begin{align}
-\angle BAP = \angle CAP
-\end{align}
-
-\begin{align}
-\angle ABP = \angle ACP
-\end{align}
-
-\begin{align}
-\angle APB = \angle APC
-\end{align}
-
-So, we can say that for $\triangle ABC$, $\angle A$ + $\angle B$ + $\angle C$ = 180 $\degree$.
-
-$\implies$ $\angle A$ + 2$\angle B$ = 180 $\degree$.
-
-For $\triangle ABP$,
-\begin{align}
-\frac{\angle A}{2} + \angle B + \angle APB = 180 \degree\\
-\implies \angle A + 2 \angle B + 2\angle APB = 360 \degree\\
-\implies 180 \degree + 2\angle APB = 360 \degree\\
-\implies 2\angle APB = 180 \degree\\
-\implies \angle APB = 90 \degree\\
-\implies \vec{AP} \bot \vec{BC}
-\end{align}
-
-
+so, we can say that $\vec{DP}$ is perpendicular to $\vec{BC}$ and this indicates that $\vec{AP}$ is the perpendicular bisector of $\vec{BC}$.
 %Hence, the above problem statement  is proved.
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
