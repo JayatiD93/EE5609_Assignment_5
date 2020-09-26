@@ -216,7 +216,7 @@ d) $AP$ is the parpendicular bisector of $BC$
 \label{fig:iso_scelen}	
 \end{figure}
 
-The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: $\vec{A} = \myvec{a_1\\a_2}$ , $\vec{B} = \myvec{0\\0}$, $\vec{C} = \myvec{c_1\\0}$, $\vec{D} = \myvec{d_1\\d_2}$ and $\vec{P} = \myvec{p_1\\0}$
+The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: A, B and C for $\triangle ABC$ and D, B and C for $\triangle DBC$. For $\triangle ABC$ the sides AB, BC and CA are represented by the vectors $\vec{AB}$ , $\vec{BC}$ and $\vec{CA}$.
 
 From the problem statement we get that:
 \begin{align}
@@ -231,84 +231,100 @@ From the problem statement we get that:
 \end{align}
 \label{cond2}
 
-Now, let $\vec{P}$ = k$\vec{C}$ as $\vec{P}$ is on $\vec{BC}$.
-So, 
 \begin{align}
-\myvec{p_1\\0} = k\myvec{c_1\\0}
-\implies p_1 = kc_1
+\vec{AD} = k_2 \times \vec{AP}
 \end{align}
 
-Now, squaring both side of the equation \ref{cond1},
+Now, let $\vec{BP}$= $\vec{P}$ = k $\times \vec{BC}$
+
+As for $\triangle DBC$, $\norm{\vec{DB}}$ = $\norm{\vec{DC}}$, so we can say that $\angle DBP$ = $\angle DCP$ and according to the triangular law for vector addition, $\vec{BD}$ = $\vec{BC}$ + $\vec{CD}$
+
 \begin{align}
-\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{C}}^2\\
-\implies a_1^2 + a_2^2 = (a_1- c_1)^2 + a_2^2\\
-\implies c_1^2 = 2a_1 c_1\\
-\implies c_1(c_1 - 2a_1) = 0\label{cond3}
+\angle DBP = \angle DCP\\
+\implies \frac{\vec{BD}^T \vec{P}}{\norm{\vec{BD}}\norm{\vec{P}}}=\frac{\vec{CD}^T (\vec{BC} - \vec{P})}{\norm{\vec{CD}}\norm{(\vec{BC} - \vec{P})}}\\
+\implies \frac{(\vec{BC} + \vec{CD})^T \vec{P}}{k}=\frac{\vec{CD}^T (\vec{BC} - \vec{P})}{1-k}\\
+\implies \vec{BC}^T \vec{BC} + \vec{CD}^T \vec{BC} = \vec{CD}^T \vec{BC}\\
+\implies \vec{BC}^T \vec{BC} = 0\\
+\implies \norm{BC} = 0
 \end{align}
-\label{cond3}
-So, either $c_1$ = 0 or $c_1$ = 2$a_1$. As $c_1$ = 0 is not possible, so $c_1$ = 2$a_1$.
 
-Similarly, squaring both side of the equation \ref{cond2},
+In a similar way, applying tangent law we can get that :
 \begin{align}
-\norm{\vec{D}-\vec{B}}^2 = \norm{\vec{D}-\vec{C}}^2\\
-\implies d_1^2 + d_2^2 = (d_1- c_1)^2 + d_2^2\\
-\implies c_1^2 = 2d_1 c_1\\
-\implies c_1(c_1 - 2d_1) = 0\label{cond4}
-\end{align}
-\label{cond4}
-
-So, either $c_1$ = 0 or $c_1$ = 2$d_1$. As $c_1$ = 0 is not possible, so $c_1$ = 2$d_1$.
-
-So, it is observed that $d_1$ = $a_1$.
-So we can say that $\vec{A} = \myvec{a_1\\a_2}$ and $\vec{D} = \myvec{a_1\\d_2}$ and as $\vec{AD}$ is extended to intersect $\vec{BC}$ at $\vec{P}$, so $\vec{P} = \myvec{a_1\\0}$.
-
-Now, $\norm{\vec{BP}}$ = $p_1$ = $a_1$ and $\norm{\vec{CP}}$ = $\sqrt{(2a_1 - a_1)^2}$= $a_1$.
-
-For $\triangle DBC$ being iso-scelen, $\angle DBC$ = $\angle DCB$. 
-\begin{align}
-\angle DBC = \angle DCB\\
-\implies \frac{\vec{CD}^T \vec{CP}}{\norm{\vec{CD}}\norm{\vec{CP}}}=\frac{\vec{BD}^T \vec{BP}}{\norm{\vec{BD}}\norm{\vec{BP}}}\\
-\implies k\norm{\vec{CP}} = (1-k)\norm{\vec{BP}}\\
-\implies k \times a_1 = (1-k) \times a-1 \\
+\angle DBP = \angle DCP\\
+\implies \frac{\norm{\vec{AP}-\vec{AD}}}{\norm{P}} = \frac{\norm{\vec{AP}-\vec{AD}}}{\norm{\vec{BC}-P}}\\
+\implies k \times \norm{\vec{BC}} = (1-k) \times \norm{\vec{BC}}\\
 \implies k= \frac{1}{2}
 \end{align}
 
-Now, let the angle between $\vec{AB}$ and $\vec{AP}$ is $\theta_1$ and the angle between $\vec{AP}$ and $\vec{AC}$ is $\theta_2$.
+Let $\angle DPB$ = $\phi$, so
 \begin{align}
-\cos\theta_1 = \frac{\vec{AB}^T \vec{AP}}{\norm{\vec{AB}}\norm{\vec{AP}}}\\
-\implies \cos\theta_1 = \frac{a_1^2 - ka_1c_1 + a_2^2}{\norm{\vec{AB}}\norm{\vec{AP}}}\\
-\implies \cos\theta_1 = \frac{a_1^2 - 2ka_1^2 + a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
-\end{align}
-
-Now, putting the value of k = $\frac{1}{2}$,
-\begin{align}
-\cos\theta_1 = \frac{a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
-\end{align}
-
-Similarly,
-\begin{align}
-\cos\theta_2 = \frac{\vec{AC}^T \vec{AP}}{\norm{\vec{AC}}\norm{\vec{AP}}}\\
-\implies \cos\theta_2 = \frac{-a_1^2 + 2ka_1^2 + a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
-\end{align}
-
-And now, putting the value of k = $\frac{1}{2}$,
-\begin{align}
- \cos\theta_2 = \frac{a_2^2}{\norm{\vec{AC}}\norm{\vec{AP}}}
-\end{align}
-
-So, it can be easily observed that $\theta_1$ = $\theta_2$ (considering the principle value) and this proves that $\vec{AP}$ bisects $\angle A$.
-
-Now, let consider the angle between $\vec{DP}$ and $\vec{BP}$ is $\phi$.
-\begin{align}
-\cos\phi = \frac{\vec{PD}^T \vec{PB}}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
-\implies \cos\phi = \frac{p_1(p_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
-\implies \cos\phi = \frac{p_1(2kd_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
-\implies \cos\phi = \frac{p_1(d_1 - d_1)}{\norm{\vec{PD}}\norm{\vec{PB}}}\\
+\cos\phi = \frac{\norm{\vec{BP}}}{\norm{\vec{BD}}}\\
+\implies \cos\phi = \frac{k \norm{\vec{BC}}}{\norm{\vec{BD}}}\\
 \implies \cos\phi = 0\\
 \implies \phi = 90 \degree
 \end{align}
 
-so, we can say that $\vec{DP}$ is perpendicular to $\vec{BC}$ and this indicates that $\vec{AP}$ is the perpendicular bisector of $\vec{BC}$.
+But we know that 
+\begin{align}
+\cos\phi = \frac{\vec{P}^T (\vec{AP} - \vec{AD})}{\norm{\vec{P}}\norm{(\vec{AP} - \vec{AD})}}\\
+\cos\phi = \frac{\vec{BC}^T (\vec{AP} - \vec{AD})}{\norm{\vec{BC}}\norm{(\vec{AP} - \vec{AD})}}
+\end{align}
+
+Now, we can conclude that 
+\begin{align}
+\frac{\vec{BC}^T (\vec{AP} - \vec{AD})}{\norm{\vec{BC}}\norm{(\vec{AP} - \vec{AD})}} = 0\\
+\implies \vec{BC}^T (\vec{AP} - \vec{AD}) = 0
+\end{align}
+
+In a similar way,
+\begin{align}
+\cos\phi = \frac{\vec{P}^T \vec{AP}}{\norm{\vec{P}}\norm{\vec{AP}}}\\
+\implies \cos\phi = \frac{\vec{BC}^T \vec{AP}}{\norm{\vec{BC}}\norm{\vec{AP}}}\\
+\end{align}
+
+Now, 
+\begin{align}
+\frac{\vec{BC}^T \vec{AP}}{\norm{\vec{BC}}\norm{\vec{AP}}} = 0\\
+\implies \vec{BC}^T \vec{AP} = 0
+\end{align}
+
+So we can say that, AP is a perpendicular bisector of BC as $\vec{P}$ = $\frac{1}{2} \vec{BC}$.
+
+Now, let $\angle BAP$ = $\theta_1$ and $\angle CAP$ = $\theta_2$
+\begin{align}
+\cos\theta_1 = \frac{\vec{BA}^T \vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}}\\
+\cos\theta_2 = \frac{\vec{CA}^T \vec{AP}}{\norm{\vec{CA}}\norm{\vec{AP}}}\\
+\text{or,}\cos\theta_2 = \frac{\vec{CA}^T \vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}}\\
+\end{align}
+
+According to the vector triangular law for $\triangle ABC$, $\vec{BA}$ = $\vec{BC}$ + $\vec{CA}$
+\begin{align}
+\cos\theta_1 = \frac{(\vec{BC}^T + \vec{CA}^T)\vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}}\\
+\implies \cos\theta_1 = \frac{\vec{BC}^T \vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}} + \frac{\vec{CA}^T \vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}}\\
+\implies \cos\theta_1 = \frac{\vec{CA}^T \vec{AP}}{\norm{\vec{BA}}\norm{\vec{AP}}}\\
+\implies \cos\theta_1 = \cos\theta_2\\
+\implies \theta_1 = \theta_2
+\end{align}
+
+Similarly, let $\angle BDP$ = $\alpha$ and $\angle CDP$ = $\beta$
+
+\begin{align}
+\cos\alpha = -\frac{\vec{BD}^T \vec{PD}}{\norm{\vec{BD}}\norm{\vec{PD}}}\\
+\text{or,} \cos\alpha = -\frac{\vec{BD}^T (\vec{AP}-\vec{AD})}{\norm{\vec{BD}}\norm{\vec{PD}}}\\
+\cos\beta = - \frac{\vec{CD}^T \vec{PD}}{\norm{\vec{CD}}\norm{\vec{PD}}}\\
+\text{or,}\cos\beta = - \frac{\vec{CD}^T (\vec{AP}-\vec{AD})}{\norm{\vec{BD}}\norm{\vec{PD}}}
+\end{align}
+
+According to the vector triangular law for $\triangle DBC$, $\vec{BD}$ = $\vec{BC}$ + $\vec{CD}$
+\begin{align}
+\cos\alpha = \frac{(\vec{BC}^T + \vec{CD}^T)(\vec{AD}-\vec{AP})}{\norm{\vec{BD}}\norm{\vec{PD}}}\\
+\implies \cos\alpha = \frac{\vec{BC}^T (\vec{AD}-\vec{AP})}{\norm{\vec{BD}}\norm{\vec{PD}}} + \frac{\vec{CD}^T (\vec{AD}-\vec{AP})}{\norm{\vec{BD}}\norm{\vec{PD}}}\\
+\implies \cos\alpha = - \frac{\vec{CD}^T (\vec{AP}-\vec{AD})}{\norm{\vec{BD}}\norm{\vec{PD}}}\\
+\implies \cos\alpha = \cos\beta\\
+\implies \alpha = \beta
+\end{align}
+
+So, we can conclude that AP bisects $\angle A$ as well as $\angle D$.
 %Hence, the above problem statement  is proved.
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
