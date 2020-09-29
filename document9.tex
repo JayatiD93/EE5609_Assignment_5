@@ -162,6 +162,7 @@ columns=fullflexible
 
 \vspace{3cm}
 
+
 \title{Assignment 5}
 \author{Jayati Dutta}
 
@@ -216,120 +217,106 @@ d) $AP$ is the parpendicular bisector of $BC$
 \label{fig:iso_scelen}	
 \end{figure}
 
-The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: A, B and C for $\triangle ABC$ and D, B and C for $\triangle DBC$. For $\triangle ABC$ the sides AB, BC and CA are represented by the vectors $\vec{A-B}$ , $\vec{B-C}$ and $\vec{C-A}$.
+The above problem statement is depicted in the figure \ref{fig:iso_scelen} where the vertices are: A, B and C for $\triangle ABC$ and D, B and C for $\triangle DBC$. For $\triangle ABC$ the sides AB, BC and CA are represented by the vectors $\vec{A-B}$ , $\vec{B-C}$ and $\vec{C-A}$ and for $\triangle DBC$ the sides DB, BC and CD are represented by $\vec{D-B}$ , $\vec{B-C}$ and $\vec{C-D}$.
 
 From the problem statement we get that:
-\begin{align}
+\begin{equation}
+\begin{aligned}
 \norm{\vec{A}-\vec{B}} = \norm{\vec{A}-\vec{C}}
 %\implies \norm{\vec{AB}} = \norm{\vec{AC}}
-\end{align}
+\end{aligned}
+\end{equation}
 \label{cond1}
-
 \begin{align}
 \norm{\vec{D}-\vec{B}} = \norm{\vec{D}-\vec{C}}
 %\implies \norm{\vec{DB}} = \norm{\vec{DC}}
 \end{align}
 \label{cond2}
-
 \begin{align}
-\vec{A-D} = k_2 \times (\vec{A-P})
+\vec{P-C} = K_2 (\vec{B-C})\\
+\vec{P-B} = K_1 (\vec{B-C})
 \end{align}
-
-Now, let $\vec{B-P}$= $\vec{P}$ = k $\times (\vec{B-C})$
-
-As for $\triangle DBC$, $\norm{\vec{D-B}}$ = $\norm{\vec{D-C}}$, so we can say that $\angle DBP$ = $\angle DCP$ and according to the triangular law for vector addition, $\vec{B-D}$ = $(\vec{B-C})$ + $(\vec{C-D})$
-
+As the $\triangle ABC$ is an iso-scelen triangle,
 \begin{align}
-\angle DBP = \angle DCP\\
-\implies \frac{(\vec{B-D})^T \vec{P}}{\norm{\vec{B-D}}\norm{\vec{P}}}=\\
-\frac{(\vec{C-D})^T ((\vec{B-C}) - \vec{P})}{\norm{\vec{C-D}}\norm{((\vec{B-C}) - \vec{P})}}\\
-\implies \frac{((\vec{B-C}) + (\vec{C-D}))^T \vec{P}}{k}=\\
-\frac{(\vec{C-D})^T ((\vec{B-C}) - \vec{P})}{1-k}\\
-\implies (\vec{B-C})^T (\vec{B-C}) + (\vec{C-D})^T (\vec{B-C}) =\\
- (\vec{C-D})^T (\vec{B-C})\\
-\implies (\vec{B-C})^T (\vec{B-C}) = 0\\
-\implies \norm{\vec{B-C}} = 0
+\angle ABC = \angle ACB
 \end{align}
-
-In a similar way, applying tangent law we can get that :
+Similarly, as the $\triangle DBC$ is an iso-scelen triangle,
 \begin{align}
-\angle DBP = \angle DCP\\
-\implies \frac{\norm{(\vec{A-P})-(\vec{A-D})}}{\norm{\vec{P}}} = \frac{\norm{(\vec{A-P})-(\vec{A-D})}}{\norm{(\vec{B-C})-\vec{P}}}\\
-\implies k \times \norm{\vec{B-C}} = (1-k) \times \norm{\vec{B-C}}\\
-\implies k= \frac{1}{2}
+\angle DBC = \angle DCB
 \end{align}
-
-Let $\angle DPB$ = $\phi$, so
+From the triangular law of vector addition, we can also get that:
 \begin{align}
-\cos\phi = \frac{\norm{\vec{B-P}}}{\norm{\vec{B-D}}}\\
-\implies \cos\phi = \frac{k \norm{\vec{B-C}}}{\norm{\vec{B-D}}}\\
-\implies \cos\phi = 0\\
-\implies \phi = 90 \degree
+\vec{A-B} = (\vec{A-P}) + (\vec{P-B})\\
+\vec{A-C} = (\vec{A-P}) + (\vec{P-C})\\
+\vec{D-B} = (\vec{D-P}) + (\vec{P-B})\\
+\vec{D-C} = (\vec{D-P}) + (\vec{P-C})
 \end{align}
-
-But we know that 
+Now squaring both side of equation \ref{cond1}, 
 \begin{align}
-\cos\phi = \frac{\vec{P}^T ((\vec{A-P}) - (\vec{A-D}))}{\norm{\vec{P}}\norm{((\vec{A-P}) - (\vec{A-D}))}}\\
-\cos\phi = \frac{(\vec{B-C})^T ((\vec{A-P}) - (\vec{A-D}))}{\norm{\vec{B-C}}\norm{((\vec{A-P}) - (\vec{A-D}))}}
+\norm{\vec{A}-\vec{B}} =\norm{\vec{A}-\vec{C}}\\
+\text{or,}\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{C}}^2\\
+\text{or,}\norm{(\vec{A-P}) + (\vec{P-B})}^2 = \norm{(\vec{A-P}) + (\vec{P-C})}^2\\
+\text{or,}\norm{(\vec{A-P})}^2 + 2K_1\norm{(\vec{A-P})}\norm{(\vec{B-C})} \\
++ K_1^2\norm{(\vec{B-C})}^2 =\\
+ \norm{(\vec{A-P})}^2 + 2K_2\norm{(\vec{A-P})}\norm{(\vec{B-C})} \\
+ + K_2^2\norm{(\vec{B-C})}^2\\
+\text{or,}(K_1-K_2)\norm{(\vec{B-C})}(2\norm{(\vec{A-P})} \\
++ (K_1+K_2)\norm{(\vec{B-C})}) = 0
 \end{align}
-
-Now, we can conclude that 
+As $\norm{(\vec{A-P})} > 0$, $\norm{(\vec{B-C})} > 0$ and $K_1 + K_2 > 0$, so we can say that $K_1$ = $K_2$.
 \begin{align}
-\frac{(\vec{B-C})^T ((\vec{A-P}) - (\vec{A-D}))}{\norm{\vec{B-C}}\norm{((\vec{A-P}) - (\vec{A-D}))}} = 0\\
-\implies (\vec{B-C})^T ((\vec{A-P}) - (\vec{A-D})) = 0
+K_1 = K_2
+\implies \vec{P-C} = \vec{P-B}
 \end{align}
-
-In a similar way,
-\begin{align}
-\cos\phi = \frac{\vec{P}^T (\vec{A-P})}{\norm{\vec{P}}\norm{\vec{A-P}}}\\
-\implies \cos\phi = \frac{(\vec{B-C})^T (\vec{A-P})}{\norm{\vec{B-C}}\norm{\vec{A-P}}}\\
-\end{align}
-
+So, it can be concluded that $\vec{A-P}$ bisects $\vec{B-C}$.
 Now, 
 \begin{align}
-\frac{(\vec{B-C})^T (\vec{A-P})}{\norm{\vec{B-C}}\norm{\vec{A-P}}} = 0\\
-\implies (\vec{B-C})^T (\vec{A-P}) = 0
+\cos\theta_1 = \frac{(\vec{A-B})^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\theta_1  = \frac{((\vec{A-P})+(\vec{P-B}))^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}
 \end{align}
-
-So we can say that, AP is a perpendicular bisector of BC as $\vec{P}$ = $\frac{1}{2} (\vec{B-C})$.
-
-Now, let $\angle BAP$ = $\theta_1$ and $\angle CAP$ = $\theta_2$
+Similarly,
 \begin{align}
-\cos\theta_1 = \frac{(\vec{B-A})^T (\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}}\\
-\cos\theta_2 = \frac{(\vec{C-A})^T (\vec{A-P})}{\norm{\vec{C-A}}\norm{\vec{A-P}}}\\
-\text{or,}\cos\theta_2 = \frac{(\vec{C-A})^T (\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}}\\
+\cos\theta_2 = \frac{(\vec{A-C})^T (\vec{A-P})}{\norm{\vec{A-C}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\theta_2  = \frac{((\vec{A-P})+(\vec{P-C}))^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\theta_2  = \frac{((\vec{A-P})+(\vec{P-B}))^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}
 \end{align}
-
-According to the vector triangular law for $\triangle ABC$, $\vec{B-A}$ = $(\vec{B-C})$ + $(\vec{C-A})$
+So, we can say that, $\theta_1$ = $\theta_2$
+Now for $\triangle DBC$,
 \begin{align}
-\cos\theta_1 = \frac{((\vec{B-C})^T + (\vec{C-A})^T)(\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}}\\
-\implies \cos\theta_1 = \frac{(\vec{B-C})^T (\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}} + \frac{(\vec{C-A})^T (\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}}\\
-\implies \cos\theta_1 = \frac{(\vec{C-A})^T (\vec{A-P})}{\norm{\vec{B-A}}\norm{\vec{A-P}}}\\
-\implies \cos\theta_1 = \cos\theta_2\\
-\implies \theta_1 = \theta_2
+\cos\alpha = \frac{(\vec{D-B})^T (\vec{D-P})}{\norm{\vec{D-B}}\norm{\vec{D-P}}}\\
+\text{or,}\cos\alpha  = \frac{((\vec{D-P})+(\vec{P-B}))^T (\vec{D-P})}{\norm{\vec{D-B}}\norm{\vec{D-P}}}
 \end{align}
-
-Similarly, let $\angle BDP$ = $\alpha$ and $\angle CDP$ = $\beta$
-
+Similarly,
 \begin{align}
-\cos\alpha = -\frac{(\vec{B-D})^T (\vec{P-D})}{\norm{\vec{B-D}}\norm{\vec{P-D}}}\\
-\text{or,} \cos\alpha = -\frac{(\vec{B-D})^T ((\vec{A-P})-(\vec{A-D}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}}\\
-\cos\beta = - \frac{(\vec{C-D})^T (\vec{P-D})}{\norm{\vec{C-D}}\norm{\vec{P-D}}}\\
-\text{or,}\cos\beta = - \frac{(\vec{C-D})^T ((\vec{A-P})-(\vec{A-D}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}}
+\cos\beta = \frac{(\vec{D-C})^T (\vec{D-P})}{\norm{\vec{D-C}}\norm{\vec{D-P}}}\\
+\text{or,}\cos\beta = \frac{((\vec{D-P})+(\vec{P-C}))^T (\vec{D-P})}{\norm{\vec{D-B}}\norm{\vec{D-P}}}\\
+\text{or,}\cos\beta  = \frac{((\vec{D-P})+(\vec{P-B}))^T (\vec{D-P})}{\norm{\vec{D-B}}\norm{\vec{D-P}}}
 \end{align}
+So, we can conclude that $\alpha$ = $\beta$.
+These imply that $\vec{A-P}$ bisects $\angle A$ as well as $\angle D$.
 
-According to the vector triangular law for $\triangle DBC$, $\vec{B-D}$ = $(\vec{B-C})$ + $(\vec{C-D})$
+Now, for $\triangle ABP$,
 \begin{align}
-\cos\alpha = \frac{((\vec{B-C})^T + (\vec{C-D})^T)((\vec{A-D})-(\vec{A-P}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}}\\
-\implies \cos\alpha = \frac{(\vec{B-C})^T ((\vec{A-D})-(\vec{A-P}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}} \\
-+ \frac{(\vec{C-D})^T ((\vec{A-D})-(\vec{A-P}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}}\\
-\implies \cos\alpha = - \frac{(\vec{C-D})^T ((\vec{A-P})-(\vec{A-D}))}{\norm{\vec{B-D}}\norm{\vec{P-D}}}\\
-\implies \cos\alpha = \cos\beta\\
-\implies \alpha = \beta
+\angle BAP + \angle ABP + \angle APB = 180 \degree
 \end{align}
 
-So, we can conclude that AP bisects $\angle A$ as well as $\angle D$.
-%Hence, the above problem statement  is proved.
+Now, for $\triangle ACP$,
+\begin{align}
+\angle CAP + \angle ACP + \angle APC = 180 \degree
+\end{align}
+But we know that, for $\triangle ABP$ and $\triangle ACP$ :
+\begin{align}
+\angle BAP = \angle CAP \\
+\angle ABP = \angle ACP \\
+\implies \angle APB = \angle APC
+\end{align}
+Now,
+\begin{align}
+\angle APB + \angle APC = 180 \degree\\
+\implies 2 \angle APB = 180 \degree\\
+\implies  \angle APB = 90 \degree\\
+\end{align}
+Hence, it is proved that $\vec{A-P}$ bisects $\vec{B-C}$ perpendicularly.
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
