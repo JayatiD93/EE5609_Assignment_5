@@ -256,14 +256,15 @@ Now squaring both side of equation \ref{cond1},
 \norm{\vec{A}-\vec{B}} =\norm{\vec{A}-\vec{C}}\\
 \text{or,}\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{C}}^2\\
 \text{or,}\norm{(\vec{A-P}) + (\vec{P-B})}^2 = \norm{(\vec{A-P}) + (\vec{P-C})}^2\\
-\text{or,}\norm{(\vec{A-P})}^2 + 2K_1\norm{(\vec{A-P})}\norm{(\vec{B-C})} \\
-+ K_1^2\norm{(\vec{B-C})}^2 =\\
- \norm{(\vec{A-P})}^2 + 2K_2\norm{(\vec{A-P})}\norm{(\vec{B-C})} \\
- + K_2^2\norm{(\vec{B-C})}^2\\
-\text{or,}(K_1-K_2)\norm{(\vec{B-C})}(2\norm{(\vec{A-P})} \\
-+ (K_1+K_2)\norm{(\vec{B-C})}) = 0
+\text{or,}((\vec{A-P}) + (\vec{P-B}))^T ((\vec{A-P}) + (\vec{P-B})) =\\
+ ((\vec{A-P}) + (\vec{P-C}))^T ((\vec{A-P}) + (\vec{P-C}))\\
+\text{or,}((\vec{A-P})^T + K_1(\vec{B-C})^T)((\vec{A-P}) + K_1(\vec{B-C})) =\\
+((\vec{A-P})^T + K_2(\vec{B-C})^T)((\vec{A-P}) + K_2(\vec{B-C}))\\
+\text{or,} (K_1 - K_2)\\
+((\vec{B-C})^T (\vec{A-P}) \\
++ (\vec{A-P})^T (\vec{B-C}) + (K_1 + K_2)\norm{B-C}^2)=0
 \end{align}
-As $\norm{(\vec{A-P})} > 0$, $\norm{(\vec{B-C})} > 0$ and $K_1 + K_2 > 0$, so we can say that $K_1$ = $K_2$.
+As $(\vec{A-P})^T (\vec{B-C}) \neq 0$, $(\vec{B-C})^T (\vec{A-P}) \neq 0$ and $K_1 + K_2 > 0$, so we can say that $K_1$ = $K_2$.
 \begin{align}
 K_1 = K_2
 \implies \vec{P-C} = \vec{P-B}
