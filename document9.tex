@@ -238,12 +238,13 @@ From the problem statement we get that:
 \end{align}
 As the $\triangle ABC$ is an iso-scelen triangle,
 \begin{align}
-\angle ABC = \angle ACB
+\angle ABC = \angle ACB =\gamma
 \end{align}
 Similarly, as the $\triangle DBC$ is an iso-scelen triangle,
 \begin{align}
-\angle DBC = \angle DCB
+\angle DBC = \angle DCB 
 \end{align}
+Let consider $\angle APB$ = $\phi_1$, $\angle APC$ = $\phi_2$ and $\phi_1 + \phi_2$ = 180 $\degree$.
 From the triangular law of vector addition, we can also get that:
 \begin{align}
 \vec{A-B} = (\vec{A-P}) + (\vec{P-B})\\
@@ -260,17 +261,23 @@ Now squaring both side of equation \ref{cond1},
  ((\vec{A-P}) + (\vec{P-C}))^T ((\vec{A-P}) + (\vec{P-C}))\\
 \text{or,}((\vec{A-P})^T + K_1(\vec{B-C})^T)((\vec{A-P}) + K_1(\vec{B-C})) =\\
 ((\vec{A-P})^T + K_2(\vec{B-C})^T)((\vec{A-P}) + K_2(\vec{B-C}))\\
-\text{or,} (K_1 - K_2)\\
-((\vec{B-C})^T (\vec{A-P}) \\
-+ (\vec{A-P})^T (\vec{B-C}) + (K_1 + K_2)\norm{B-C}^2)=0
+\text{or,} (K_1 - K_2)((\vec{B-C})^T (\vec{A-P}) \\
++ (\vec{A-P})^T (\vec{B-C}) + (K_1 + K_2)\norm{\vec{B-C}}^2)=0
 \end{align}
-As $(\vec{A-P})^T (\vec{B-C}) \neq 0$, $(\vec{B-C})^T (\vec{A-P}) \neq 0$ and $K_1 + K_2 > 0$, so we can say that $K_1$ = $K_2$.
+So, there are 2 cases, either $(K_1 - K_2)$ = 0 or 
 \begin{align}
-K_1 = K_2
-\implies \vec{P-C} = \vec{P-B}
+((\vec{B-C})^T (\vec{A-P}) \\
++ (\vec{A-P})^T (\vec{B-C}) + (K_1 + K_2)\norm{\vec{B-C}}^2)= 0\\
+\text{or,}(K_1 + K_2)\norm{\vec{B-C}}^2 = - (\vec{B-C})^T (\vec{A-P})\\
+-(\vec{A-P})^T (\vec{B-C})\\
+\text{or,}(K_1 + K_2)\frac{\norm{\vec{B-C}}}{\norm{\vec{A-P}}}= \frac{- (\vec{P-B})^T (\vec{A-P})}{\norm{\vec{P-B}} \norm{\vec{A-P}}}\\
+ - \frac{(\vec{P-C})^T (\vec{A-P})}{\norm{\vec{P-C}} \norm{\vec{A-P}}}\\
+\text{or,}(K_1 + K_2)\frac{\norm{\vec{B-C}}}{\norm{\vec{A-P}}} = - \cos\phi_1 - \cos\phi_2\\
+\text{or,}(K_1 + K_2)\frac{\norm{\vec{B-C}}}{\norm{\vec{A-P}}} = - \cos\phi_1 + \cos\phi_1\\
+\text{or,}(K_1 + K_2)\frac{\norm{\vec{B-C}}}{\norm{\vec{A-P}}} = 0\\
+\implies K_1 = -K_2
 \end{align}
-So, it can be concluded that $\vec{A-P}$ bisects $\vec{B-C}$.
-Now, 
+So, for the first case, that is, when $K_1$ = $K_2$ :
 \begin{align}
 \cos\theta_1 = \frac{(\vec{A-B})^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
 \text{or,}\cos\theta_1  = \frac{((\vec{A-P})+(\vec{P-B}))^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}
@@ -295,29 +302,41 @@ Similarly,
 \end{align}
 So, we can conclude that $\alpha$ = $\beta$.
 These imply that $\vec{A-P}$ bisects $\angle A$ as well as $\angle D$.
-
-Now, for $\triangle ABP$,
+For $K_1 = K_2$, $\vec{P-C}$ = $\vec{P-B}$
 \begin{align}
-\angle BAP + \angle ABP + \angle APB = 180 \degree
+\cos\phi_1 = \frac{(\vec{A-P})^T (\vec{P-B})}{\norm{\vec{P-B}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\phi_1 = \frac{((\vec{A-B}) + (\vec{B-P}))^T (\vec{P-B})}{\norm{\vec{P-B}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\phi_1 = \frac{(\vec{A-B})^T (\vec{P-B})+ (\vec{B-P})^T (\vec{P-B})}{\norm{\vec{P-B}}\norm{\vec{A-P}}}\\
+\text{or,}\cos\phi_1 = \cos\gamma - \frac{\norm{\vec{B-P}}}{\norm{\vec{A-P}}}\\
 \end{align}
-
-Now, for $\triangle ACP$,
+Similarly,
 \begin{align}
-\angle CAP + \angle ACP + \angle APC = 180 \degree
-\end{align}
-But we know that, for $\triangle ABP$ and $\triangle ACP$ :
+\cos\phi_2 = \cos\gamma - \frac{\norm{\vec{P-C}}}{\norm{\vec{A-P}}}\\
+\text{or,}\cos\phi_2 = \cos\gamma - \frac{\norm{\vec{P-B}}}{\norm{\vec{A-P}}}\\
+\text{or,}\cos\phi_2 = \cos\gamma - \frac{\norm{\vec{B-P}}}{\norm{\vec{A-P}}}\\
+\end{align} 
+From here it can be concluded
 \begin{align}
-\angle BAP = \angle CAP \\
-\angle ABP = \angle ACP \\
-\implies \angle APB = \angle APC
+\cos\phi_1=\cos\phi_2\\
+\text{or,}\phi_1=\phi_2\\
+\text{or,}\phi_1 + \phi_2 = 180 \degree\\
+\implies \phi_1 = 90 \degree
 \end{align}
-Now,
+For the second case, that is, when $K_1=-K_2$,
+$\vec{P-C} = \vec{B-P}$
 \begin{align}
-\angle APB + \angle APC = 180 \degree\\
-\implies 2 \angle APB = 180 \degree\\
-\implies  \angle APB = 90 \degree\\
+\cos\phi_1 = \cos\gamma - \frac{\norm{\vec{B-P}}}{\norm{\vec{A-P}}}\\
+\cos\phi_2 = \cos\gamma - \frac{\norm{\vec{P-C}}}{\norm{\vec{A-P}}}\\
+\implies \cos\phi_2 = \cos\gamma - \frac{\norm{\vec{B-P}}}{\norm{\vec{A-P}}}\\
+\end{align} 
+Which also implies that 
+\begin{align}
+\cos\phi_1=\cos\phi_2\\
+\text{or,}\phi_1=\phi_2\\
+\text{or,}\phi_1 + \phi_2 = 180 \degree\\
+\implies \phi_1 = 90 \degree
 \end{align}
-Hence, it is proved that $\vec{A-P}$ bisects $\vec{B-C}$ perpendicularly.
+Hence, it is proved that AP bisects BC perpendicularly.
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
