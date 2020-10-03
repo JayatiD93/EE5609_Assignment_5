@@ -232,10 +232,10 @@ From the problem statement we get that:
 %\implies \norm{\vec{DB}} = \norm{\vec{DC}}
 \end{align}
 \label{cond2}
-\begin{align}
-\vec{P-C} = K_2 (\vec{B-C})\\
-\vec{P-B} = K_1 (\vec{B-C})
-\end{align}
+%\begin{align}
+%\vec{P-C} = K_2 (\vec{B-C})\\
+%\vec{P-B} = K_1 (\vec{B-C})
+%\end{align}
 As the $\triangle ABC$ is an iso-scelen triangle,
 \begin{align}
 \angle ABC = \angle ACB =\gamma
@@ -244,27 +244,47 @@ Similarly, as the $\triangle DBC$ is an iso-scelen triangle,
 \begin{align}
 \angle DBC = \angle DCB 
 \end{align}
-Let consider $\angle APB$ = $\phi_1$, $\angle APC$ = $\phi_2$ and $\phi_1 + \phi_2$ = 180 $\degree$.
+Let consider $\angle APB$ = $\phi$,$\angle BAP$ = $\theta_1$, $\angle CAP$ = $\theta_2$,$\angle BDP$ = $\alpha$ and $\angle CDP$ = $\beta$.
 From the triangular law of vector addition, we can also get that:
 \begin{align}
-\vec{A-B} = (\vec{A-P}) + (\vec{P-B})\\
-\vec{A-C} = (\vec{A-P}) + (\vec{P-C})\\
-\vec{D-B} = (\vec{D-P}) + (\vec{P-B})\\
-\vec{D-C} = (\vec{D-P}) + (\vec{P-C})
+\vec{A-P} = (\vec{A-B}) + (\vec{B-P})\\
+\vec{A-P} = (\vec{A-C}) + (\vec{C-P})\\
+\vec{D-P} = (\vec{D-B}) + (\vec{B-P})\\
+\vec{D-P} = (\vec{D-C}) + (\vec{C-P})\\
+\vec{B-C} = (\vec{B-A}) + (\vec{A-C})\\
+\implies \vec{B-C} = -(\vec{A-B}) + (\vec{A-C})
 \end{align}
-Now squaring both side of equation \ref{cond1}, 
+
+According to the Parallelogram law of vector addition,
+\begin{align}
+\vec{A-P} = (\vec{A-B}) + (\vec{A-C})
+\end{align}
+
+Now, 
+\begin{multline}
+(\vec{B-C}). (\vec{A-P}) = \norm{\vec{A-C}}^2 - \norm{\vec{A-B}}^2\\
+\implies (\vec{B-C})^T (\vec{A-P}) = 0\\
+\implies \cos\phi = 0\\
+\implies \phi = 90 \degree
+\end{multline}
 
 \begin{multline}
-\norm{\vec{A}-\vec{B}} =\norm{\vec{A}-\vec{C}}\\
-\text{or,}\norm{\vec{A}-\vec{B}}^2 = \norm{\vec{A}-\vec{C}}^2\\
-\text{or,}\norm{(\vec{A-P}) + (\vec{P-B})}^2 = \norm{(\vec{A-P}) + (\vec{P-C})}^2\\
-\text{or,}((\vec{A-P}) + (\vec{P-B}))^T ((\vec{A-P}) + (\vec{P-B})) =\\
- ((\vec{A-P}) + (\vec{P-C}))^T ((\vec{A-P}) + (\vec{P-C}))\\
-\text{or,}((\vec{A-P})^T + K_1(\vec{B-C})^T)((\vec{A-P}) + K_1(\vec{B-C})) =\\
-((\vec{A-P})^T + K_2(\vec{B-C})^T)((\vec{A-P}) + K_2(\vec{B-C}))\\
-\text{or,} (K_1 - K_2)((\vec{B-C})^T (\vec{A-P}) \\
-+ (\vec{A-P})^T (\vec{B-C}) + (K_1 + K_2)\norm{\vec{B-C}}^2)=0
+\cos\theta_1 = \frac{(\vec{A-B})^T (\vec{A-P})}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
+\implies \cos\theta_1 = \frac{(\vec{A-B})^T ((\vec{A-B})+(\vec{B-P}))}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
+\implies \cos\theta_1 = \frac{\norm{\vec{A-B}}}{\norm{\vec{A-P}}} - \cos\gamma\\
 \end{multline}
+
+Similarly,
+\begin{multline}
+\cos\theta_2 = \frac{(\vec{A-C})^T (\vec{A-P})}{\norm{\vec{A-C}}\norm{\vec{A-P}}}\\
+\implies \cos\theta_2 = \frac{(\vec{A-C})^T ((\vec{A-C})+(\vec{C-P}))}{\norm{\vec{A-B}}\norm{\vec{A-P}}}\\
+\implies \cos\theta_2 = \frac{\norm{\vec{A-B}}}{\norm{\vec{A-P}}} - \cos\gamma\\
+\end{multline}
+This proves that $\theta_1$ = $\theta_2$
+Similarly, for $\triangle DBC$ we can prove that $\alpha$ = $\beta$.
+
+Now we can conclude that AP bisects $\angle A$ as well as $\angle D$ and AP bisects BC perpendicularly.
+
 
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
