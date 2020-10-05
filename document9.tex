@@ -255,7 +255,29 @@ From the problem statement we get that:
 \implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{A-P})^T)=0\\
 \implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})-(\vec{2A-2P}))^T=0\\
 \implies (\vec{B-C})(\vec{B+C-2A})^T=0\\
-\implies (\vec{B-C})^T(\vec{B+C-2A})=0\\
+\implies (\vec{B+C-2A})(\vec{B-C})^T=0\\
+\end{multline}
+
+Similarly, 
+\begin{multline}
+\norm{\vec{D-B}} = \norm{\vec{D-C}}\\
+\implies \norm{\vec{D-B}}^2 = \norm{\vec{D-C}}^2\\
+\implies \norm{{(\vec{D-P}) + (\vec{P-B})}}^2 = \norm{{(\vec{D-P}) + (\vec{P-C})}}^2\\
+\implies \norm{\vec{D-P}}^2 + \norm{\vec{P-B}}^2 + 2(\vec{D-P})^T (\vec{P-B})=\\
+\norm{\vec{D-P}}^2 + \norm{\vec{P-C}}^2 + 2(\vec{D-P})^T (\vec{P-C})\\
+\implies \norm{\vec{P-B}}^2 + 2(\vec{D-P})^T (\vec{P-B})=\\
+\norm{\vec{P-C}}^2 + 2(\vec{D-P})^T (\vec{P-C})\\
+\implies \norm{\vec{P-B}}^2 -\norm{\vec{P-C}}^2\\
+ + 2(\vec{D-P})^T ((\vec{P-B})-(\vec{P-C})) =0\\
+\implies ((\vec{P-B})+(\vec{P-C}))^T ((\vec{P-B})-(\vec{P-C}))\\
++ 2(\vec{D-P})^T ((\vec{P-B})-(\vec{P-C})) =0\\
+\implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})\\
++2(\vec{D-P})^T (\vec{P}-\vec{B}-\vec{P}+\vec{C}) =0\\
+\implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})+2(\vec{D-P})^T (\vec{B-C}) =0\\
+\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{D-P})^T)=0\\
+\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})-(\vec{2D-2P}))^T=0\\
+\implies (\vec{B-C})(\vec{B+C-2D})^T=0\\
+\implies (\vec{B+C-2D})(\vec{B-C})^T=0\\
 \end{multline}
 
 \renewcommand{\theequation}{\theenumi}
