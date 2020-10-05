@@ -236,7 +236,6 @@ From the problem statement we get that:
 \vec{P-C} = K_2 (\vec{B-C})\\
 \vec{P-B} = K_1 (\vec{B-C})
 \end{align}
-
 \begin{multline}
 \norm{\vec{A-B}} = \norm{\vec{A}-\vec{C}}\\
 \implies \norm{\vec{A-B}}^2 = \norm{\vec{A-C}}^2\\
@@ -252,12 +251,18 @@ From the problem statement we get that:
 \implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})\\
 +2(\vec{A-P})^T (\vec{P}-\vec{B}-\vec{P}+\vec{C}) =0\\
 \implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})+2(\vec{A-P})^T (\vec{B-C}) =0\\
-\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{A-P})^T)=0\\
-\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})-(\vec{2A-2P}))^T=0\\
-\implies (\vec{B-C})(\vec{B+C-2A})^T=0\\
-\implies (\vec{B+C-2A})(\vec{B-C})^T=0\\
+\implies ((\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{A-P})^T)(\vec{B-C})=0\\
+\implies ((\vec{B}+\vec{C}-2\vec{P})-(\vec{2A-2P}))^T (\vec{B-C})=0\\
+\implies (\vec{B+C-2A})^T (\vec{B-C})=0\\
+\implies (\vec{B-C})^T (\vec{B+C-2A})=0\\
 \end{multline}
-
+\label{cond3}
+Now, 
+\begin{multline}
+(\vec{B-C})^T (\vec{\frac{B+C}{2}-A})=0\\
+\implies (\vec{\frac{B+C}{2}-A}) \perp (\vec{B-C})
+\end{multline}
+So, we can conclude that $\vec{A-P}$ bisects $\vec{B-C}$ perpendicularly.
 Similarly, 
 \begin{multline}
 \norm{\vec{D-B}} = \norm{\vec{D-C}}\\
@@ -274,12 +279,18 @@ Similarly,
 \implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})\\
 +2(\vec{D-P})^T (\vec{P}-\vec{B}-\vec{P}+\vec{C}) =0\\
 \implies (\vec{B}+\vec{C}-2\vec{P})^T (\vec{B-C})+2(\vec{D-P})^T (\vec{B-C}) =0\\
-\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{D-P})^T)=0\\
-\implies (\vec{B-C})(\vec{B}+\vec{C}-2\vec{P})-(\vec{2D-2P}))^T=0\\
-\implies (\vec{B-C})(\vec{B+C-2D})^T=0\\
-\implies (\vec{B+C-2D})(\vec{B-C})^T=0\\
+\implies ((\vec{B}+\vec{C}-2\vec{P})^T - 2(\vec{D-P})^T) (\vec{B-C})=0\\
+\implies ((\vec{B}+\vec{C}-2\vec{P})-(\vec{2D-2P}))^T (\vec{B-C})=0\\
+\implies (\vec{B+C-2D})^T (\vec{B-C})=0\\
+\implies (\vec{B-C})^T (\vec{B+C-2D})=0\\
 \end{multline}
-
+\label{cond4}
+Similarly, Dividing by 2, we get:
+\begin{multline}
+(\vec{B-C})^T (\vec{\frac{B+C}{2}-D})=0\\
+\implies (\vec{\frac{B+C}{2}-D}) \perp (\vec{B-C})
+\end{multline}
+So, we can conclude that $\vec{D-P}$ bisects $\vec{B-C}$ perpendicularly.
 \renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
